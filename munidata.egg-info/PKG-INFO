@@ -1,0 +1,68 @@
+Metadata-Version: 1.1
+Name: munidata
+Version: 1.2
+Summary: Provides an API for accessing multiple instances of Unicode data
+Home-page: UNKNOWN
+Author: Viagenie and Wil Tan
+Author-email: support@viagenie.ca
+License: TBD
+Description: # Munidata
+        
+        munidata is an API for accessing multiple instances of Unicode data.
+        
+        The current version of munidata is a simple abstraction layer on top of the [picu](https://pypi.python.org/pypi/picu) module.
+        
+        ## Pre-requisites
+        
+        * Python 2.7
+        * [picu](https://pypi.python.org/pypi/picu) [MIT/X License]
+        
+        ## Setup
+        
+        If your distribution does not package the required dependencies, the easiest way
+        to get a working environment in no-time is to use Python's virtual environments.
+        
+        * Install [virtualenv](https://github.com/pypa/virtualenv)
+        * Create a python virtualenv:
+        
+        		$ virtualenv venv
+        
+        * Activate the environment:
+        
+        		$ source ./venv/bin/activate
+        
+        * Download dependencies:
+        
+        		$ (venv) pip install -r requirements.txt
+        
+        * Install some versions of the [ICU library](http://site.icu-project.org/download)
+        
+        ## Use
+        
+        To get the general category of a codepoint for multiple ICU versions:
+        
+            $ python test_munidata.py --libs /usr/local/Cellar/icu4c/52.1/lib/libicuuc.dylib#/usr/local/Cellar/icu4c/52.1/lib/libicui18n.52.1.dylib#52 --libs /usr/local/Cellar/icu4c/4.4.1/lib/libicuuc.dylib#/usr/local/Cellar/icu4c/4.4.1/lib/libicui18n.dylib#44 19DA gc
+            Unicode version: %s 6.3.0.0
+            U+19DA (NEW TAI LUE THAM DIGIT ONE)
+            Other_Number
+            Unicode version: %s 5.2.0.0
+            U+19DA (NEW TAI LUE THAM DIGIT ONE)
+            Decimal_Number
+        
+        Same thing with just plain picu:
+        
+            $ python picu_multi.py --libs /usr/local/Cellar/icu4c/52.1/lib/libicuuc.dylib#/usr/local/Cellar/icu4c/52.1/lib/libicui18n.52.1.dylib#52 --libs /usr/local/Cellar/icu4c/4.4.1/lib/libicuuc.dylib#/usr/local/Cellar/icu4c/4.4.1/lib/libicui18n.dylib#44 19DA gc
+            INFO:picu_multi:Library '/usr/local/Cellar/icu4c/52.1/lib/libicuuc.dylib' loaded. Unicode version: 6.3.0.0
+            INFO:picu_multi:Library '/usr/local/Cellar/icu4c/4.4.1/lib/libicuuc.dylib' loaded. Unicode version: 5.2.0.0
+            INFO:picu_multi:Unicode version: 6.3.0.0
+            U+19DA (NEW TAI LUE THAM DIGIT ONE)
+            Other_Number
+            INFO:picu_multi:Unicode version: 5.2.0.0
+            U+19DA (NEW TAI LUE THAM DIGIT ONE)
+            Decimal_Number
+        
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Libraries
