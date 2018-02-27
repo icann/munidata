@@ -65,7 +65,7 @@ def parse_idna_tables(version):
     # To keep '{}' when string-formatting
     namespace = "{{{0}}}".format(IDNATABLES_NS)
     registry_id = "idna-tables-properties"
-    if version <= "6.0.0":
+    if map(int, version.split('.')) <= [6, 0, 0]:
         registry_id = "idna-tables-{}-properties".format(version)
     record_xpath = '{0}registry[@id="{1}"]/{0}record'.format(namespace,
                                                              registry_id)
@@ -116,6 +116,7 @@ def main():
     logging.basicConfig(stream=sys.stderr, level=logging.DEBUG if args.verbose else logging.INFO)
 
     parse_idna_tables(args.unicode)
+
 
 if __name__ == '__main__':
     main()
