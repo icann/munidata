@@ -39,16 +39,16 @@ def main():
     cp = int(args.codepoint, 16)
     prop = args.property
     for db in databases:
-        print "Unicode version: %s" % db.get_unicode_version()
-        print "U+%04X (%s)" % (cp, db.get_char_name(cp))
+        print("Unicode version: %s" % db.get_unicode_version())
+        print("U+%04X (%s)" % (cp, db.get_char_name(cp)))
         if prop.lower() == 'script_extensions':
-            print db.get_script_extensions(cp)
-        if prop.lower() == 'script_alpha4':
-            print db.get_script(cp, alpha4=True)
+            print(db.get_script_extensions(cp))
+        elif prop.lower() == 'script_alpha4':
+            print(db.get_script(cp, alpha4=True))
         elif prop.lower() == 'age':
-            print db.get_char_age(cp)
+            print(db.get_char_age(cp))
         else:
-            print db.get_prop_value(cp, prop)
+            print(db.get_prop_value(cp, prop))
 
 if __name__ == '__main__':
     main()
