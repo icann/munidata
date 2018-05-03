@@ -41,7 +41,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
 THE POSSIBILITY OF SUCH DAMAGE.
 ## Pre-requisites
 
-* Python 2.7
+* Python (2.7, or >= 3.4)
 * [picu](https://pypi.python.org/pypi/picu) [MIT/X License]
 
 ## Setup

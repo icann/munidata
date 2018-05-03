@@ -5,7 +5,7 @@ from io import open
 
 setup(
     name="munidata",
-    version='1.2',
+    version='2.0.0',
     description="Provides an API for accessing multiple instances of Unicode data",
     license="TBD",
     author='Viagenie and Wil Tan',
