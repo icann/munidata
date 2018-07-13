@@ -65,7 +65,7 @@ def parse_idna_tables(version):
     # To keep '{}' when string-formatting
     namespace = "{{{0}}}".format(IDNATABLES_NS)
     registry_id = "idna-tables-properties"
-    if map(int, version.split('.')) <= [6, 0, 0]:
+    if list(map(int, version.split('.'))) <= [6, 0, 0]:
         registry_id = "idna-tables-{}-properties".format(version)
     record_xpath = '{0}registry[@id="{1}"]/{0}record'.format(namespace,
                                                              registry_id)
