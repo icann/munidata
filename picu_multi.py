@@ -3,7 +3,7 @@
 import sys
 import os
 from picu.loader import icu_load
-from picu.constants import U_CHAR_NAME_ALIAS, U_UNICODE_CHAR_NAME, U_UNICODE_10_CHAR_NAME, U_EXTENDED_CHAR_NAME
+from picu.constants import U_UNICODE_CHAR_NAME, U_SHORT_PROPERTY_NAME
 
 __version__ = '0.1'
 __author__ = 'Wil Tan <wil@cloudregistry.net>'
@@ -52,11 +52,18 @@ def main():
     prop = args.property
     for icu in icu_libs:
         logger.info("Unicode version: %s", icu.getUnicodeVersion())
-        print "U+%04X (%s)" % (cp, icu.charName(cp, U_UNICODE_CHAR_NAME))
+        print("U+%04X (%s)" % (cp, icu.charName(cp, U_UNICODE_CHAR_NAME)))
         if prop.lower() == 'script_extensions':
-            print icu.get_script_extensions(cp)
+            print(icu.get_script_extensions(cp))
+        elif prop.lower() == 'script':
+            print(icu.get_script(cp))
+        elif prop.lower() == 'script_alpha4':
+            print(icu.get_script(cp, U_SHORT_PROPERTY_NAME))
+        elif prop.lower() == 'age':
+            print(icu.charAge(cp))
         else:
-            print icu.get_prop_value(cp, prop)
+            print(icu.get_prop_value(cp, prop))
+
 
 if __name__ == '__main__':
     main()
