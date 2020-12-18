@@ -42,6 +42,33 @@ class UnicodeDatabase(object):
     def get_prop_value(self, cp, prop_name, prop_type=U_LONG_PROPERTY_NAME):
         raise NotImplementedError
 
+    def is_combining_mark(self, cp):
+        """
+        Check if character is a combining mark
+
+        :param cp: Codepoint.
+        :return:  Whether the character is a combining mark.
+        """
+        raise NotImplementedError
+
+    def is_digit(self, cp):
+        """
+        Check if character is a digit.
+
+        :param cp: Codepoint.
+        :return:  Whether the character is a digit.
+        """
+        raise NotImplementedError
+
+    def is_script_rtl(self, script):
+        """
+        Check is a script is Right To Left.
+
+        :param script: Script.
+        :return: Whether the script is Right To Left.
+        """
+        raise NotImplementedError
+
     def get_idna_prop(self, cp):
         """
         Retrieve the IDNA property of a character.
@@ -150,6 +177,15 @@ class PICUDatabase(UnicodeDatabase):
         else:
             prop_type = U_LONG_PROPERTY_NAME
         return self._icu.get_script(cp, prop_type)
+
+    def is_combining_mark(self, cp):
+        return self._icu.is_combining_mark(cp)
+
+    def is_digit(self, cp):
+        return self._icu.is_digit(cp)
+
+    def is_script_rtl(self, script):
+        return self._icu.is_script_rtl(script)
 
     def get_script_extensions(self, cp, alpha4=False):
         if alpha4:
