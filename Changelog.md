@@ -1,5 +1,9 @@
 # Changelog for munidata
 
+## 2.1.0 (2021-04-27)
+### New features
+- Add new methods to unicode database class
+
 ## 2.0.0 (2018-09-06)
 ### New features
 - Support of Python 3. Compatibility with python2 is preserved for this release.
