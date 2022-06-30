@@ -6,6 +6,8 @@ from __future__ import unicode_literals
 
 import logging
 
+from .idna_tables_1200 import idna_tables_1200
+from .idna_tables_1100 import idna_tables_1100
 from .idna_tables_1000 import idna_tables_1000
 from .idna_tables_900 import idna_tables_900
 from .idna_tables_800 import idna_tables_800
@@ -20,6 +22,9 @@ logger = logging.getLogger(__name__)
 
 
 IDNA_UNICODE_MAPPING = {
+    '12.1.0': idna_tables_1200,  # FIXME: update with actual 12.1.0 IANA IDNA Table
+    '12.0.0': idna_tables_1200,
+    '11.0.0': idna_tables_1100,
     '10.0.0': idna_tables_1000,
     '9.0.0': idna_tables_900,
     '8.0.0': idna_tables_800,
