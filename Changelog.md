@@ -1,5 +1,9 @@
 # Changelog for munidata
 
+## 2.2.0 (2022-10-26)
+### New features
+- Support of Unicode up to 12.0.0.
+
 ## 2.1.0 (2021-04-27)
 ### New features
 - Add new methods to unicode database class
