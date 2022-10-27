@@ -13,6 +13,7 @@ setup(
     install_requires=["picu"],
     packages=find_packages(),
     long_description=open('README.md', encoding='utf-8').read(),
+    long_description_content_type='text/markdown',
     scripts=['tools/parse_idna_tables.py'],
     classifiers=[
         'Operating System :: OS Independent',
