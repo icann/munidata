@@ -60,6 +60,15 @@ class UnicodeDatabase(object):
         """
         raise NotImplementedError
 
+    def is_rtl(self, cp):
+        """
+        Check is character is from a Right To Left script.
+
+        :param cp: Codepoint.
+        :return:  Whether the character is from a Right To Left script.
+        """
+        raise NotImplementedError
+
     def is_script_rtl(self, script):
         """
         Check is a script is Right To Left.
@@ -183,6 +192,9 @@ class PICUDatabase(UnicodeDatabase):
 
     def is_digit(self, cp):
         return self._icu.is_digit(cp)
+
+    def is_rtl(self, cp):
+        return self._icu.is_rtl(cp)
 
     def is_script_rtl(self, script):
         return self._icu.is_script_rtl(script)
