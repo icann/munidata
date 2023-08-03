@@ -1,5 +1,9 @@
 # Changelog for munidata
 
+## 2.3.0 (2023-08-04)
+### New features
+- Add a method to check if a codepoint script is rtl
+
 ## 2.2.0 (2022-10-26)
 ### New features
 - Support of Unicode up to 12.0.0.

@@ -5,11 +5,11 @@ from io import open
 
 setup(
     name="munidata",
-    version='2.2.0',
+    version='2.3.0',
     description="Provides an API for accessing multiple instances of Unicode data",
     license="TBD",
-    author='Viagenie and Wil Tan',
-    author_email='support@viagenie.ca',
+    author='Cofomo, Viagenie and Wil Tan',
+    author_email='int-eng@cofomo.com',
     install_requires=["picu"],
     packages=find_packages(),
     long_description=open('README.md', encoding='utf-8').read(),
