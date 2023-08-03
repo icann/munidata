@@ -7,7 +7,7 @@ setup(
     name="munidata",
     version='2.3.0',
     description="Provides an API for accessing multiple instances of Unicode data",
-    license="TBD",
+    license="BSD",
     author='Cofomo, Viagenie and Wil Tan',
     author_email='int-eng@cofomo.com',
     install_requires=["picu"],
@@ -23,6 +23,9 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Topic :: Software Development :: Libraries'
     ]
 )
