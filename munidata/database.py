@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 from picu.loader import icu_load
 from picu.constants import U_LONG_PROPERTY_NAME, U_SHORT_PROPERTY_NAME
-from .idna import idnatables
+from .idna import idnatables, idna2003_disallowed
 
 
 class UnicodeDatabase(object):
@@ -89,6 +89,16 @@ class UnicodeDatabase(object):
         """
         return idnatables.get_idna_property(cp,
                                             self.get_unicode_version())
+
+    @staticmethod
+    def is_idna2003_disallowed(cp):
+        """
+        Check if a code point is disallowed by IDNA2003
+
+        :param cp: Codepoint.
+        :return:  Whether the code point is disallowed by IDNA2003.
+        """
+        return cp in idna2003_disallowed.idna2003_disallowed
 
     def compile_regex(self, regex):
         """
