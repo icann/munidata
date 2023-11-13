@@ -1,5 +1,9 @@
 # Changelog for munidata
 
+## 2.3.1 (2023-11-15)
+### New features
+- Add a method to check if a code point is disallowed in IDNA 2003
+
 ## 2.3.0 (2023-08-04)
 ### New features
 - Add a method to check if a codepoint script is rtl
