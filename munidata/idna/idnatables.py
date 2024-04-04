@@ -6,23 +6,24 @@ from __future__ import unicode_literals
 
 import logging
 
-from .idna_tables_1200 import idna_tables_1200
-from .idna_tables_1100 import idna_tables_1100
 from .idna_tables_1000 import idna_tables_1000
-from .idna_tables_900 import idna_tables_900
-from .idna_tables_800 import idna_tables_800
-from .idna_tables_700 import idna_tables_700
-from .idna_tables_630 import idna_tables_630
-from .idna_tables_620 import idna_tables_620
-from .idna_tables_610 import idna_tables_610
-from .idna_tables_600 import idna_tables_600
+from .idna_tables_1100 import idna_tables_1100
+from .idna_tables_1200 import idna_tables_1200
+from .idna_tables_1510 import idna_tables_1510
 from .idna_tables_520 import idna_tables_520
+from .idna_tables_600 import idna_tables_600
+from .idna_tables_610 import idna_tables_610
+from .idna_tables_620 import idna_tables_620
+from .idna_tables_630 import idna_tables_630
+from .idna_tables_700 import idna_tables_700
+from .idna_tables_800 import idna_tables_800
+from .idna_tables_900 import idna_tables_900
 
 logger = logging.getLogger(__name__)
 
-
 IDNA_UNICODE_MAPPING = {
-    '12.1.0': idna_tables_1200,  # FIXME: update with actual 12.1.0 IANA IDNA Table
+    '15.1.0': idna_tables_1510,
+    '12.1.0': idna_tables_1200,  # IDNA Table for 12.1.0 is the same as 12.0.0
     '12.0.0': idna_tables_1200,
     '11.0.0': idna_tables_1100,
     '10.0.0': idna_tables_1000,
