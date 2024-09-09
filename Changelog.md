@@ -1,5 +1,10 @@
 # Changelog for munidata
 
+## 2.4.0 (2024-09-08)
+### New features
+- Support of Unicode up to 15.1.0. **IMPORTANT NOTE**: At the time of release, no official IDNA tables for Unicode > 12.0.0 were available.
+Thus, support for newer Unicode versions is provided 'as is'.
+
 ## 2.3.1 (2023-11-15)
 ### New features
 - Add a method to check if a code point is disallowed in IDNA 2003
