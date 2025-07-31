@@ -3,7 +3,7 @@
 """
 parse_idna_tables.py - Parse IDNA2008 tables to list codepoint property.
 
-Parse the IDNA 2008 tables from IANA website and create a dictionnary with all
+Parse the IDNA 2008 tables from IANA website and create a dictionary with all
 codepoints and their IDNA property.
 
 Copied from https://github.com/kjd/idna/blob/master/tools/build-idnadata.py
