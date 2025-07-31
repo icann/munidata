@@ -1,5 +1,9 @@
 # Changelog for munidata
 
+## 2.5.0 (2025-07-31)
+### New features
+- Support of Unicode up to 16.0.0.
+
 ## 2.4.0 (2024-09-08)
 ### New features
 - Support of Unicode up to 15.1.0. **IMPORTANT NOTE**: At the time of release, no official IDNA tables for Unicode > 12.0.0 were available.
