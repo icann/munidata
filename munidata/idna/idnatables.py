@@ -10,6 +10,7 @@ from .idna_tables_1000 import idna_tables_1000
 from .idna_tables_1100 import idna_tables_1100
 from .idna_tables_1200 import idna_tables_1200
 from .idna_tables_1510 import idna_tables_1510
+from .idna_tables_1600 import idna_tables_1600
 from .idna_tables_520 import idna_tables_520
 from .idna_tables_600 import idna_tables_600
 from .idna_tables_610 import idna_tables_610
@@ -22,6 +23,7 @@ from .idna_tables_900 import idna_tables_900
 logger = logging.getLogger(__name__)
 
 IDNA_UNICODE_MAPPING = {
+    '16.0.0': idna_tables_1600,
     '15.1.0': idna_tables_1510,
     '12.1.0': idna_tables_1200,  # IDNA Table for 12.1.0 is the same as 12.0.0
     '12.0.0': idna_tables_1200,
